@@ -13,3 +13,22 @@
 
 <p>Para abstrair as questões de encontrar endereços e obter coordenadas GPS, vamos trabalhar com uma matriz que representa os pontos da cidade. Veja um exemplo de matriz logo a seguir:</p>
 
+<img src="https://github.com/leobneto/projeto-flyflood-1va/blob/300b7f4916bc30f61c9e9cebb4e1f7ae5bac1413/assets/matriz-problema.png">
+
+<p>Na matriz, o ponto superior esquerdo é o (0,0) e nessa posição não existe um ponto de entrega. Já no ponto (1,1) existe o ponto de entrega A. Os demais pontos de entrega estão nos pontos B (3,2), C (2,4) e D (0, 4). No exemplo acima, a origem do drone, ou seja onde ele é carregado com os pedidos, é o ponto R (3,0). Por convenção, o ponto R sempre será o ponto de origem e retorno.</p>
+
+<p>Vamos considerar também que o drone não consegue andar na "diagonal". Ou seja, ele só consegue percorrer essa matriz na horizontal ou na vertical. Sendo assim, para ir do ponto A para o ponto B ele precisa percorrer 3 dronômetros (unidade de medida de custo do percurso). Para ir de B para D a distância é de 5 dronômetros.</p>
+
+<p>Seu trabalho será elaborar um algoritmo que vai ler uma matriz, a partir de um arquivo, com os pontos de entrega e o ponto de origem e retorno. Ele deverá retornar a ordem em que o drone deve percorrer os pontos de entrega. Essa ordem deve ser a de menor custo, ou seja, a que o drone vá percorrer a menor distância em dronômetros.
+
+<p>O formato do arquivo de entrada será o seguinte para a matriz de exemplo.</p>
+<p>4 5</p>
+<p>0 0 0 0 D</p>
+<p>0 A 0 0 0</p>
+<p>0 0 0 0 C</p>
+<p>R 0 B 0 0</p>
+
+<p> Sua resposta deverá ser a sequência de pontos (em forma de string) que produz o menor circuito possível a ser percorrido pelo drone entre os pontos de entrega, partindo e retornando ao ponto R (o ponto R não precisa ser incluído na sequência de resposta). Por exemplo: "A D C B". (errata: Se existir mais de um trajeto com a menor distância, basta retornar um deles.) </p>
+
+<p>Divirta-se!</p>
+
